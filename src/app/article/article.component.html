@@ -1,0 +1,14 @@
+<h1>Articles :</h1>
+<div *ngIf="undefined === myArticles">Loading...</div>
+<div *ngIf="undefined !== myArticles">
+  <div class ="card">
+			<ng-container *ngFor="let article of myArticles.articles">
+        <ul>
+          <li>{{article.title}}</li>
+          <li>{{article.content}}</li>
+          <li>{{article.created_at}}</li>
+          <li>{{article.updated_at}}</li>
+        </ul>
+			</ng-container>
+</div>
+</div>
